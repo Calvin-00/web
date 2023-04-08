@@ -30,4 +30,5 @@ public class club {
     @UpdateTimestamp
     private LocalDateTime updatedOn;
     private Long ok;
+    private Long ids;
 }
