@@ -29,4 +29,5 @@ public class club {
     private LocalDateTime createdOn;
     @UpdateTimestamp
     private LocalDateTime updatedOn;
+    private Long ok;
 }
