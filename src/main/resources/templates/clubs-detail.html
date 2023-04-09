@@ -19,7 +19,7 @@
                             <div class="small text-muted" th:text="${club.createdOn}"></div>
                             <h2 class="card-title" th:src="${club.title}">Featured Post Title</h2>
                             <p class="card-text" th:src="${club.content}"></p>
-                            <a class="btn btn-primary" href="#!">Read more →</a>
+                            <a class="btn btn-primary" th:href="@{/clubs/{clubId}/delete(clubId=${club.id})}">Delete</a>
                         </div>
                     </div>
                     <!-- Nested row for non-featured blog posts-->
@@ -40,7 +40,7 @@
                                 <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
                                 <div class="card-body">
                                     <div class="small text-muted">January 1, 2023</div>
-                                    <h2 class="card-title h4">Post Title</h2>
+                                    <h2 class="card-title h4">Event Title</h2>
                                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.</p>
                                     <a class="btn btn-primary" href="#!">Read more →</a>
                                 </div>

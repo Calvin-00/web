@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 @Service
 public class ClubServiceImpl implements ClubService {
     private ClubRepository clubRepository;
-    @Autowired
+
     public ClubServiceImpl(ClubRepository clubRepository) {
         this.clubRepository = clubRepository;
     }
@@ -41,6 +41,12 @@ public class ClubServiceImpl implements ClubService {
         clubRepository.save(club);
 
     }
+
+    @Override
+    public void delete(Long clubId) {
+        clubRepository.deleteById(clubId);
+    }
+
     private Club mapToClub(ClubDto club){
         Club clubDto = Club.builder()
                 .id(club.getId())
